@@ -28,26 +28,29 @@ class App extends Component {
     return (
       <div className="App">
         <h1>_____________ every day</h1>
-        <div className="header">
-          <div></div>
-          <div class="month">Jan</div>
-          <div class="month">Feb</div>
-          <div class="month">Mar</div>
-          <div class="month">Apr</div>
-          <div class="month">May</div>
-          <div class="month">June</div>
-          <div class="month">July</div>
-          <div class="month">Aug</div>
-          <div class="month">Sept</div>
-          <div class="month">Oct</div>
-          <div class="month">Nov</div>
-          <div class="month">Dec</div>
-        </div>
         <main id="graph" className="graph">
+
+          <div className="month start"></div>
+          <div className="month jan">Jan</div>
+          <div className="month feb">Feb</div>
+          <div className="month mar">Mar</div>
+          <div className="month apr">Apr</div>
+          <div className="month may">May</div>
+          <div className="month june">June</div>
+          <div className="month july">July</div>
+          <div className="month aug">Aug</div>
+          <div className="month sept">Sept</div>
+          <div className="month oct">Oct</div>
+          <div className="month nov">Nov</div>
+          <div className="month dec">Dec</div>
+
           <div className="sunday"></div>
           <div className="weekday">Monday</div>
           <div className="weekday">Wednesday</div>
           <div className="weekday">Friday</div>
+
+          <div className="empty"></div>
+
           {days}
         </main>
       </div>
