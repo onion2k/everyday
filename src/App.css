@@ -11,7 +11,7 @@
   grid-template-rows: 20px repeat(7, 15px);
   grid-template-columns: 100px repeat(53, 15px);
   grid-auto-flow: column;
-  grid-gap: 5px;
+  grid-gap: 3px;
   margin: 5px 20px;
 }
 
@@ -30,18 +30,18 @@
 }
 
 .start { grid-column: 1 / 2; }
-.jan { grid-column: 2 / 7; }
-.feb { grid-column: 7 / 11; }
-.mar { grid-column: 11 / 15; }
+.jan { grid-column: 2 / 6; }
+.feb { grid-column: 6 / 10; }
+.mar { grid-column: 10 / 15; }
 .apr { grid-column: 15 / 19; }
 .may { grid-column: 19 / 24; }
 .june { grid-column: 24 / 28; }
 .july { grid-column: 28 / 32; }
 .aug { grid-column: 32 / 37; }
-.sept { grid-column: 37 / 42; }
-.oct { grid-column: 42 / 46; }
-.nov { grid-column: 46 / 50; }
-.dec { grid-column: 50 / 55; }
+.sept { grid-column: 37 / 41; }
+.oct { grid-column: 41 / 45; }
+.nov { grid-column: 45 / 49; }
+.dec { grid-column: 49 / 55; }
 
 .day {
   border-radius: 1px;
