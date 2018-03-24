@@ -7,9 +7,18 @@
 
 body {
   font-family: "system";
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-items: center;
+}
+
+h1 {
+  flex: 1;
 }
 
 .calendar {
+  flex: 1;
   display: grid;
   grid-template-rows: 20px repeat(7, 10px);
   grid-template-columns: repeat(53, 10px);
@@ -56,23 +65,23 @@ body {
   background-color: #bbbbbb;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .weekday {
     display: block;
   }
   .start { grid-column: 1 / 2; }
   .jan { grid-column: 2 / 6; }
   .feb { grid-column: 6 / 10; }
-  .mar { grid-column: 10 / 14; }
-  .apr { grid-column: 14 / 18; }
-  .may { grid-column: 18 / 22; }
-  .june { grid-column: 22 / 27; }
-  .july { grid-column: 27 / 31; }
-  .aug { grid-column: 31 / 35; }
-  .sept { grid-column: 35 / 39; }
-  .oct { grid-column: 39 / 43; }
-  .nov { grid-column: 43 / 48; }
-  .dec { grid-column: 48 / 54; }
+  .mar { grid-column: 10 / 15; }
+  .apr { grid-column: 15 / 19; }
+  .may { grid-column: 19 / 23; }
+  .june { grid-column: 23 / 28; }
+  .july { grid-column: 28 / 32; }
+  .aug { grid-column: 32 / 36; }
+  .sept { grid-column: 36 / 41; }
+  .oct { grid-column:41 / 45; }
+  .nov { grid-column: 45 / 49; }
+  .dec { grid-column: 49 / 55; }
   .calendar {
     grid-template-rows: 20px repeat(7, 11px);
     grid-template-columns: 100px repeat(53, 11px);
