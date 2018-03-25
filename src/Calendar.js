@@ -3,6 +3,8 @@ import palx from 'palx';
 import months from './months.json';
 import './Calendar.css';
 
+import Day from './Day';
+
 export default class Calendar extends Component {
 
   constructor(props){
@@ -18,14 +20,17 @@ export default class Calendar extends Component {
     let days = [];
     for(let x=0; x < n; x++) {
       let productivity = 0;
-      let classes = ['day'];
       let day = this.state.days[x];
       if (day > 0) {
         productivity = 1 + Math.floor(day / 5);
       }
       days.push(<div className={'day'} style={{ backgroundColor: this.state.colors[color][productivity*2] }}></div>);
+      // days.push(<Day color={color} productivity={productivity*2}></Day>);
     }
     return days;
+  }
+  offset(n){
+    return Array(3).fill(<div className="empty"></div>);
   }
   render(){
     return (
@@ -38,7 +43,7 @@ export default class Calendar extends Component {
           
           <div className="month start"></div>
           <div className="month jan">Jan</div>
-          <div className="empty"></div>
+          {this.offset(1)}
           {this.days(this.m[0],"red")}
 
           <div className="month feb">Feb</div>

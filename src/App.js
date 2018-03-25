@@ -10,7 +10,7 @@ class App extends Component {
       days:[],
     }
     for (let x=0;x<366;x++) {
-      this.state.days.push(12);
+      this.state.days.push(Math.floor(Math.random()*12));
     }
   }
   render() {
