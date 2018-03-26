@@ -1,7 +1,8 @@
 {
   "days":[
-    {"productivity": 3, "notes":["Updated readme", "Added function", "Refactored some code"]},
+    {"productivity": 12, "notes":["Updated readme", "Added function", "Refactored some code"]},
     {},
+    {"productivity": 12, "notes":["Updated readme"]},
     {},
     {},
     {},
@@ -363,7 +364,6 @@
     {},
     {},
     {},
-    {},
-    {}
+    {"productivity": 12, "notes":["Updated readme"]}
   ]
 }

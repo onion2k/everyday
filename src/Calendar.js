@@ -21,7 +21,8 @@ export default class Calendar extends Component {
   }
   days(n, color){
     let days = [];
-    for(let x=0; x < n; x++) {
+    let offset = this.m.reduce((t, x, i)=>{ return t += (i < n) ? x : 0 }, 0);
+    for(let x=offset; x < offset+this.m[n]; x++) {
       let productivity = 0;
       let day = this.state.days[x];
       if (day.productivity > 0) {
@@ -47,40 +48,40 @@ export default class Calendar extends Component {
           <div className="month start"></div>
           <div className="month jan">Jan</div>
           {this.offset(this.weekday)}
-          {this.days(this.m[0],"red")}
+          {this.days(0,"red")}
 
           <div className="month feb">Feb</div>
-          {this.days(this.m[1],"orange")}
+          {this.days(1,"orange")}
 
           <div className="month mar">Mar</div>
-          {this.days(this.m[2],"yellow")}
+          {this.days(2,"yellow")}
 
           <div className="month apr">Apr</div>
-          {this.days(this.m[3],"lime")}
+          {this.days(3,"lime")}
 
           <div className="month may">May</div>
-          {this.days(this.m[4],"green")}
+          {this.days(4,"green")}
 
           <div className="month june">June</div>
-          {this.days(this.m[5],"teal")}
+          {this.days(5,"teal")}
 
           <div className="month july">July</div>
-          {this.days(this.m[6],"cyan")}
+          {this.days(6,"cyan")}
 
           <div className="month aug">Aug</div>
-          {this.days(this.m[7],"blue")}
+          {this.days(7,"blue")}
 
           <div className="month sept">Sept</div>
-          {this.days(this.m[8],"indigo")}
+          {this.days(8,"indigo")}
 
           <div className="month oct">Oct</div>
-          {this.days(this.m[9],"violet")}
+          {this.days(9,"violet")}
 
           <div className="month nov">Nov</div>
-          {this.days(this.m[10],"pink")}
+          {this.days(10,"pink")}
 
           <div className="month dec">Dec</div>
-          {this.days(this.m[11],"gray")}
+          {this.days(11,"gray")}
 
         </main>
     );
