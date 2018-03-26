@@ -42,6 +42,10 @@ h1 {
   justify-self: start;
 }
 
+.calendar {
+  --offset: 1;
+}
+
 .jan { grid-column: 1 / 5; }
 .feb { grid-column: 5 / 9; }
 .mar { grid-column: 9 / 13; }
@@ -66,9 +70,7 @@ h1 {
 }
 
 @media screen and (min-width: 600px) {
-  .weekday {
-    display: block;
-  }
+  .weekday { display: block; }
   .start { grid-column: 1 / 2; }
   .jan { grid-column: 2 / 6; }
   .feb { grid-column: 6 / 10; }

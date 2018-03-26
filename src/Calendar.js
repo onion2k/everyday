@@ -10,6 +10,9 @@ export default class Calendar extends Component {
   constructor(props){
     super(props);
     this.m = Object.keys(months).map((month, i) => { return months[month].days; });
+    this.year = 2018;
+    this.date = new Date('2016-01-01');
+    this.weekday = this.date.getDay();
     this.state = {
       days: props.days,
       colors: palx('#f00'),
@@ -21,8 +24,8 @@ export default class Calendar extends Component {
     for(let x=0; x < n; x++) {
       let productivity = 0;
       let day = this.state.days[x];
-      if (day > 0) {
-        productivity = 1 + Math.floor(day / 5);
+      if (day.productivity > 0) {
+        productivity = 1 + Math.floor(day.productivity / 5);
       }
       days.push(<div className={'day'} style={{ backgroundColor: this.state.colors[color][productivity*2] }}></div>);
       // days.push(<Day color={color} productivity={productivity*2}></Day>);
@@ -30,7 +33,7 @@ export default class Calendar extends Component {
     return days;
   }
   offset(n){
-    return Array(3).fill(<div className="empty"></div>);
+    return Array(n).fill(<div className="empty"></div>);
   }
   render(){
     return (
@@ -43,7 +46,7 @@ export default class Calendar extends Component {
           
           <div className="month start"></div>
           <div className="month jan">Jan</div>
-          {this.offset(1)}
+          {this.offset(this.weekday)}
           {this.days(this.m[0],"red")}
 
           <div className="month feb">Feb</div>
