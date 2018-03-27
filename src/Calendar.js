@@ -21,14 +21,17 @@ export default class Calendar extends Component {
   }
   days(n, color){
     let days = [];
-    let offset = this.m.reduce((t, x, i)=>{ return t += (i < n) ? x : 0 }, 0);
+    // let offset = this.m.reduce((t, x, i)=>{ return t += (i < n) ? x : 0 }, 0);
+    let offset = this.m.slice(0,n).reduce((t, x)=>{ return t += x }, 0);
     for(let x=offset; x < offset+this.m[n]; x++) {
       let productivity = 0;
       let day = this.state.days[x];
       if (day.productivity > 0) {
         productivity = 1 + Math.floor(day.productivity / 5);
       }
-      days.push(<div className={'day'} style={{ backgroundColor: this.state.colors[color][productivity*2] }}></div>);
+      let classes = ['day'];
+      if (productivity === 3) { classes.push('fiftyfifty'); }
+      days.push(<div className={classes.join(' ')}></div>);
       // days.push(<Day color={color} productivity={productivity*2}></Day>);
     }
     return days;

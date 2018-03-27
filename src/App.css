@@ -99,3 +99,10 @@ h1 {
     grid-gap: 3px;
   }
 }
+
+.fiftyfifty {
+  background: rgb(255,0,4); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(255,0,4,1) 50%, rgba(30,87,153,1) 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(255,0,4,1) 50%,rgba(30,87,153,1) 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(255,0,4,1) 50%,rgba(30,87,153,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
