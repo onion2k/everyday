@@ -11,13 +11,23 @@ export default class Calendar extends Component {
     super(props);
     this.m = Object.keys(months).map((month, i) => { return months[month].days; });
     this.year = 2018;
-    this.date = new Date('2016-01-01');
+    this.date = new Date('2018-01-01');
     this.weekday = this.date.getDay();
     this.state = {
       days: props.days,
       colors: palx('#f00'),
-      color: "violet"
+      color: "violet",
+      active: -1
     }
+    this.active = this.active.bind(this);
+    this.days = this.days.bind(this);
+  }
+  active(e){
+    let active = document.querySelector('.active')
+    if (active) { active.classList.toggle('active'); }
+    e.target.classList.toggle('active');
+    let date = new Date(2018, 0, e.target.getAttribute('rel'));
+    this.setState({active: date.toString()});
   }
   days(n, color){
     let days = [];
@@ -27,11 +37,11 @@ export default class Calendar extends Component {
       let productivity = 0;
       let day = this.state.days[x];
       if (day.productivity > 0) {
-        productivity = 1 + Math.floor(day.productivity / 5);
+        productivity = 1 + Math.floor(day.productivity / 6);
       }
       let classes = ['day'];
       if (productivity === 3) { classes.push('fiftyfifty'); }
-      days.push(<div className={classes.join(' ')}></div>);
+      days.push(<div className={classes.join(' ')} onClick={this.active} rel={x+1}></div>);
       // days.push(<Day color={color} productivity={productivity*2}></Day>);
     }
     return days;
@@ -85,6 +95,8 @@ export default class Calendar extends Component {
 
           <div className="month dec">Dec</div>
           {this.days(11,"gray")}
+          
+        {this.state.active}
 
         </main>
     );

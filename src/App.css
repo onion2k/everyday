@@ -42,10 +42,6 @@ h1 {
   justify-self: start;
 }
 
-.calendar {
-  --offset: 1;
-}
-
 .jan { grid-column: 1 / 5; }
 .feb { grid-column: 5 / 9; }
 .mar { grid-column: 9 / 13; }
@@ -70,7 +66,7 @@ h1 {
   background-color: #bbbbbb;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 200px) {
   .weekday { display: block; }
   .start { grid-column: 1 / 2; }
   .jan { grid-column: 2 / 6; }
@@ -86,8 +82,8 @@ h1 {
   .nov { grid-column: 45 / 49; }
   .dec { grid-column: 49 / 55; }
   .calendar {
-    grid-template-rows: 20px repeat(7, 11px);
-    grid-template-columns: 100px repeat(53, 11px);
+    grid-template-rows: 25px repeat(7, 15px);
+    grid-template-columns: 120px repeat(53, 15px);
     grid-gap: 2px;
   }
 }
@@ -105,4 +101,8 @@ h1 {
   background: -moz-linear-gradient(-45deg, rgba(255,0,4,1) 50%, rgba(30,87,153,1) 50%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, rgba(255,0,4,1) 50%,rgba(30,87,153,1) 50%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, rgba(255,0,4,1) 50%,rgba(30,87,153,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.active {
+  border-color: black;
 }
