@@ -20,3 +20,4 @@ The philosophy behind the "everyday" project is threefold;
 * Begin inputs (chatbot, Twilio, Alexa, etc)
 * Account creation
 * everyday stats
+* Firebase integration
