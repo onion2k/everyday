@@ -95,8 +95,6 @@ export default class Calendar extends Component {
 
           <div className="month dec">Dec</div>
           {this.days(11,"gray")}
-          
-        {this.state.active}
 
         </main>
     );
