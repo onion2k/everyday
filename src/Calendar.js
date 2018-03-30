@@ -26,8 +26,9 @@ export default class Calendar extends Component {
     let active = document.querySelector('.active')
     if (active) { active.classList.toggle('active'); }
     e.target.classList.toggle('active');
-    let date = new Date(2018, 0, e.target.getAttribute('rel'));
-    this.setState({active: date.toString()});
+    // let date = new Date(2018, 0, e.target.getAttribute('rel'));
+    // this.setState({active: date.toString()});
+    this.props.updateActiveDate(e.target.getAttribute('rel'));
   }
   days(n, color){
     let days = [];
@@ -40,7 +41,8 @@ export default class Calendar extends Component {
         productivity = 1 + Math.floor(day.productivity / 6);
       }
       let classes = ['day'];
-      if (productivity === 3) { classes.push('fiftyfifty'); }
+      //Work out classes for activity log
+      
       days.push(<div className={classes.join(' ')} onClick={this.active} rel={x+1}></div>);
       // days.push(<Day color={color} productivity={productivity*2}></Day>);
     }
