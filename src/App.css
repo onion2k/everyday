@@ -7,17 +7,15 @@
 
 body {
   font-family: "system";
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   align-items: center;
-  justify-items: center;
 }
 
 .App {
   background-color: lightgreen;
-  display: grid;
-  align-items: center;
 }
 
 h1 {

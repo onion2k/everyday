@@ -43,7 +43,7 @@ export default class Calendar extends Component {
       let classes = ['day'];
       //Work out classes for activity log
       
-      days.push(<div className={classes.join(' ')} onClick={this.active} rel={x+1}></div>);
+      days.push(<div className={classes.join(' ')} onClick={this.active} rel={x}></div>);
       // days.push(<Day color={color} productivity={productivity*2}></Day>);
     }
     return days;

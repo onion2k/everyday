@@ -10,20 +10,31 @@ class App extends Component {
     super(props);
     this.state = {
       days: data.days,
-      active: 'null'
+      active: null,
+      activity: null
     }
     this.updateActiveDate = this.updateActiveDate.bind(this);
   }
   updateActiveDate(d){
-    let date = new Date(2018, 0, d);
-    this.setState({active: date.toString()});
+    let date = new Date(2018, 0, d+1);
+    this.setState({
+      activity: this.state.days[d],
+      active: date.toString()
+    });
   }
   render() {
+    let notes = null;
+    if (this.state.activity) {
+      notes = this.state.activity.notes.map((note)=>{
+        return <p>{note}</p>;
+      });
+    }
     return (
       <div className="App">
         <h1>_____________ every day</h1>
         <Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} />
         <p>{this.state.active}</p>
+        <p>{notes}</p>
       </div>
     );
   }
