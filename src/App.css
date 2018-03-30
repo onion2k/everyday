@@ -7,18 +7,28 @@
 
 body {
   font-family: "system";
-  display: flex;
+  display: grid;
   width: 100vw;
+  height: 100vh;
   align-items: center;
   justify-items: center;
 }
 
+.App {
+  background-color: lightgreen;
+  display: grid;
+  align-items: center;
+}
+
 h1 {
   flex: 1;
+  background-color: pink;
+  text-align: center;
 }
 
 .calendar {
   flex: 1;
+  background-color: lightblue;
   display: grid;
   grid-template-rows: 20px repeat(7, 10px);
   grid-template-columns: repeat(53, 10px);

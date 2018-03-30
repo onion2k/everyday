@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       days: data.days,
-      active: null
+      active: 'null'
     }
     this.updateActiveDate = this.updateActiveDate.bind(this);
   }
