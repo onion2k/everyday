@@ -3,6 +3,7 @@ import './App.css';
 
 import data from './data.json';
 
+import Title from './Title';
 import Calendar from './Calendar';
 
 class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>_____________ every day</h1>
+        <Title />
         <Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} />
         <p>{this.state.active}</p>
         <p>{notes}</p>
