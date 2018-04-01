@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Title.css';
 
 export default class Title extends Component {
   
@@ -8,9 +9,10 @@ export default class Title extends Component {
     this.loop = this.loop.bind(this);
     this.state = {
       title: 0,
+      counter: 0,
       offset: -30,
       titles: [
-        '__________',
+        'Design',
         'Read',
         'Yoga',
         'Code',
@@ -22,7 +24,13 @@ export default class Title extends Component {
         'Compose',
         'Sing',
         'Practise',
-        'Walk'
+        'Walk',
+        'Sculpt',
+        'Photograph',
+        'Weave',
+        'Game',
+        'Hustle',
+        'Learn'
       ]
     }
   }
@@ -42,13 +50,25 @@ export default class Title extends Component {
   }
   
   loop() {
-    let o = this.state.offset;
+    let c = this.state.counter;
+    let o;
     let t = this.state.title;
-    o -= 1;
-    if (o < -40) { o = 40; t += 1; }
+    c += 1;
+    if (c > 30 && c < 70) {
+      o = 0;
+    } else if (c <= 30) {
+      o = c - 30;
+    } else {
+      o = c - 70;
+    }
+
+    if (c > 110) { c = 0; t += 1; }
     if (t > this.state.titles.length-1) { t = 0; }
-    this.setState({title: t, offset: o})
+
+    this.setState({title: t, offset: -1*o, counter: c})
+
     this._frameId = window.requestAnimationFrame( this.loop )
+
   }
   
   stopLoop() {
@@ -58,10 +78,10 @@ export default class Title extends Component {
 
   render(){
     let title = this.state.titles[this.state.title];
-    let style = { display: 'inline-block', width: '160px', 'text-align': 'right', transform: "translateY("+this.state.offset+"px)" };
+    let style = { transform: "translateY("+this.state.offset+"px)" };
     return (
-      <div>
-        <h1 style={{ overflow: 'hidden' }}><span style={style}>{title}</span> every day</h1>
+      <div className={"title"}>
+        <h1><span style={style}>{title}</span> every day</h1>
       </div>
     );
   }

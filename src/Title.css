@@ -1,0 +1,11 @@
+div > h1 {
+  overflow: hidden;
+}
+
+div > h1 > span {
+  display: inline-block;
+  color: #888888;
+  width: 180px;
+  margin-left: -90px;
+  text-align: right;
+}

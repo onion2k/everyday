@@ -15,18 +15,16 @@ body {
 }
 
 .App {
-  background-color: lightgreen;
+
 }
 
 h1 {
   flex: 1;
-  background-color: pink;
   text-align: center;
 }
 
 .calendar {
   flex: 1;
-  background-color: lightblue;
   display: grid;
   grid-template-rows: 20px repeat(7, 10px);
   grid-template-columns: repeat(53, 10px);
