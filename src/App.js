@@ -26,9 +26,13 @@ class App extends Component {
   render() {
     let notes = null;
     if (this.state.activity) {
-      notes = this.state.activity.notes.map((note)=>{
-        return <p>{note}</p>;
-      });
+      if (this.state.activity.notes) {
+        notes = this.state.activity.notes.map((note)=>{
+          return <p>{note}</p>;
+        });
+      } else {
+          notes = <p>No activity</p>;
+      }
     }
     return (
       <div className="App">
