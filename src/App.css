@@ -39,7 +39,8 @@ h1 {
   align-self: start;
   justify-self: end;
   font-size: 0.8rem;
-  margin-top: -3px
+  margin-top: -2px;
+  padding-right: 3px;
 }
 
 .month {
@@ -63,8 +64,8 @@ h1 {
 
 .day {
   border-radius: 1px;
-  border: 1px solid #888888;
-  background-color: #dddddd;
+  border: 1px solid #bbbbbb;
+  background-color: #f8f8f8;
   font-size: 0.5rem;
 }
 

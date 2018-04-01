@@ -56,9 +56,9 @@ export default class Calendar extends Component {
         <main id="calendar" className="calendar">
 
           <div className="sunday"></div>
-          <div className="weekday">Mon</div>
-          <div className="weekday">Wed</div>
-          <div className="weekday">Fri</div>
+          <div className="weekday">Monday</div>
+          <div className="weekday">Wednesday</div>
+          <div className="weekday">Friday</div>
           
           <div className="month start"></div>
           <div className="month jan">Jan</div>
