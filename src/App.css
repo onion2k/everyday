@@ -11,3 +11,17 @@ body {
   display: flex;
   align-items: center;
 }
+
+.affirmation {
+  padding: 0 10vw 15px 10vw;
+  text-align: center;
+}
+
+.name {
+  font-weight: 300;
+  color: #000088;
+}
+
+.activity, .duration, .total {
+  color: #008800;
+}

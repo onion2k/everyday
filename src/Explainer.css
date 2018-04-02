@@ -1,0 +1,13 @@
+.explainerThreeCol {
+  background-color: #f0f0ff;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1f 1fr;
+  grid-gap: 30px;
+  padding:15px 10vw;
+  text-align: justify;
+}
+
+.highlight {
+  font-weight: 300;
+}
