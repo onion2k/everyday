@@ -1,8 +1,10 @@
-div > h1 {
+
+
+.title {
   overflow: hidden;
 }
 
-div > h1 > span {
+.activity {
   display: inline-block;
   color: #888888;
   width: 180px;
