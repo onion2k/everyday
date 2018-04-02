@@ -80,7 +80,10 @@ export default class Title extends Component {
     let title = this.state.titles[this.state.title];
     let style = { transform: "translateY("+this.state.offset+"px)" };
     return (
-      <h1 className={"title"}><span className={"activity"} style={style}>{title}</span> every day</h1>
+      <div className={"title"}>
+        <h1>Build positive habits with everyday</h1>
+        <h2><span className={"activity"} style={style}>{title}</span> every day</h2>
+      </div>
     );
   }
 }

@@ -1,13 +1,28 @@
-.title {
+
+div.title {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10vw;
+}
+
+div.title > h1 {
+  flex: 1;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+div.title > h2 {
+  flex: 1;
+  color: #888888;
   font-weight: 200;
   font-size: 1.6rem;
   overflow: hidden;
   text-align: right;
 }
 
-.activity {
+div.title > h2 > .activity {
   display: inline-block;
-  color: #888888;
+  color: #008800;
   width: 180px;
   text-align: right;
 }
