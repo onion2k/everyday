@@ -1,13 +1,13 @@
-
-
 .title {
+  font-weight: 200;
+  font-size: 1.6rem;
   overflow: hidden;
+  text-align: right;
 }
 
 .activity {
   display: inline-block;
   color: #888888;
   width: 180px;
-  margin-left: -90px;
   text-align: right;
 }
