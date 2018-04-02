@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import dateformat from 'dateformat';
 import './App.css';
 
 import data from './data.json';
@@ -20,7 +21,7 @@ class App extends Component {
     let date = new Date(2018, 0, d+1);
     this.setState({
       activity: this.state.days[d],
-      active: date.toString()
+      active: dateformat(date, "fullDate")
     });
   }
   render() {
