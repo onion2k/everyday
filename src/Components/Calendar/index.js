@@ -3,7 +3,7 @@ import palx from 'palx';
 import months from './months.json';
 import './Calendar.css';
 
-import Day from './Day';
+import Day from '../Day';
 
 export default class Calendar extends Component {
 

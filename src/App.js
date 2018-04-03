@@ -4,10 +4,10 @@ import './App.css';
 
 import data from './data.json';
 
-import Title from './Title';
-import Welcome from './Welcome';
-import Calendar from './Calendar';
-import Explainer from './Explainer';
+import Title from './Components/Title';
+import Welcome from './Components/Welcome';
+import Calendar from './Components/Calendar';
+import Explainer from './Components/Explainer';
 
 class App extends Component {
   constructor(props){
