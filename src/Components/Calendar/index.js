@@ -34,11 +34,13 @@ export default class Calendar extends Component {
     for(let x=offset; x < offset+this.m[n]; x++) {
       let productivity = 0;
       let day = this.state.days[x];
+      let updates = 0;
       if (day.productivity > 0) {
         productivity = day.productivity - 1;
+        updates = day.notes.length;
       }
       let prod = this.mname[n].toLowerCase()+'-'+productivity.toString();
-      days.push(<div key={'m'+n+'d'+x} className={'day'} style={styles[prod]} onClick={this.active} tooltip={`Day ${x}: ${productivity}`} tooltip-position="top" rel={x}></div>);
+      days.push(<div key={'m'+n+'d'+x} className={'day'} style={styles[prod]} onClick={this.active} tooltip={`${updates} update${updates===1?'':'s'}`} tooltip-position="top" rel={x}></div>);
 
     }
     return days;
