@@ -8,6 +8,7 @@ import Title from './Components/Title';
 import Welcome from './Components/Welcome';
 import Calendar from './Components/Calendar';
 import Explainer from './Components/Explainer';
+import Affirmation from './Components/Affirmation';
 
 class App extends Component {
   constructor(props){
@@ -42,9 +43,9 @@ class App extends Component {
         <Title />
         <Welcome name={'Chris'} title={'creator of Everyday'} />
         <Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} />
-        <p className={'affirmation'}>Well done <span className={'name'}>Chris</span>! You've managed to <span className={'activity'}>code</span> every day for a total of <span className={'duration'}>340 days</span>. There are <span className={'total'}>123</span> other people doing <span className={'activity'}>code</span> with you every day.</p>
-        <p>{this.state.active}</p>
-        <p>{notes}</p>
+        <Affirmation />
+        <div>{this.state.active}</div>
+        <div>{notes}</div>
         <Explainer />
       </div>
     );

@@ -35,10 +35,10 @@ export default class Calendar extends Component {
       let productivity = 0;
       let day = this.state.days[x];
       if (day.productivity > 0) {
-        productivity = 1 + Math.floor(day.productivity / 6);
+        productivity = day.productivity - 1;
       }
-      let prod = this.mname[n].toLowerCase()+productivity.toString();
-      days.push(<div key={'m'+n+'d'+x} className={'day'} style={styles[prod]} onClick={this.active} rel={x}></div>);
+      let prod = this.mname[n].toLowerCase()+'-'+productivity.toString();
+      days.push(<div key={'m'+n+'d'+x} className={'day'} style={styles[prod]} onClick={this.active} tooltip={`Day ${x}: ${productivity}`} tooltip-position="top" rel={x}></div>);
 
     }
     return days;
