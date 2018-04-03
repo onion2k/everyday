@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import palx from 'palx';
 import months from './months.json';
 import './Calendar.css';
-
-import Day from '../Day';
+import styles from './Productivity.css.js';
 
 export default class Calendar extends Component {
 
   constructor(props){
     super(props);
+    this.mname = Object.keys(months).map((month, i) => { return months[month].short; });
     this.m = Object.keys(months).map((month, i) => { return months[month].days; });
     this.year = 2018;
     this.date = new Date('2018-01-01');
     this.weekday = this.date.getDay();
     this.state = {
       days: props.days,
-      colors: palx('#f00'),
-      color: "violet",
       active: -1
     }
     this.active = this.active.bind(this);
@@ -40,20 +37,24 @@ export default class Calendar extends Component {
       if (day.productivity > 0) {
         productivity = 1 + Math.floor(day.productivity / 6);
       }
-      let classes = ['day'];
-      //Work out classes for activity log
-      
-      days.push(<div className={classes.join(' ')} onClick={this.active} rel={x}></div>);
-      // days.push(<Day color={color} productivity={productivity*2}></Day>);
+      let prod = this.mname[n].toLowerCase()+productivity.toString();
+      days.push(<div key={'m'+n+'d'+x} className={'day'} style={styles[prod]} onClick={this.active} rel={x}></div>);
+
     }
     return days;
   }
   offset(n){
-    return Array(n).fill(<div className="empty"></div>);
+    return Array(n).fill().map((n,i)=>{ return <div key={i.toString()} className="empty"></div> });
   }
   render(){
+    let daystyles = null;
+    this.mname.forEach((m,i)=>{
+
+    })
     return (
         <main id="calendar" className="calendar">
+
+          <style>{daystyles}</style>
 
           <div className="sunday"></div>
           <div className="weekday">Monday</div>

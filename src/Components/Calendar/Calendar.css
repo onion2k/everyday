@@ -24,18 +24,18 @@
   justify-self: start;
 }
 
-.jan { grid-column: 1 / 5; }
-.feb { grid-column: 5 / 9; }
-.mar { grid-column: 9 / 13; }
-.apr { grid-column: 13 / 17; }
-.may { grid-column: 17 / 21; }
-.june { grid-column: 21 / 26; }
-.july { grid-column: 26 / 30; }
-.aug { grid-column: 30 / 34; }
-.sept { grid-column: 34 / 38; }
-.oct { grid-column: 38 / 42; }
-.nov { grid-column: 42 / 47; }
-.dec { grid-column: 47 / 54; }
+.month.jan { grid-column: 1 / 5; }
+.month.feb { grid-column: 5 / 9; }
+.month.mar { grid-column: 9 / 13; }
+.month.apr { grid-column: 13 / 17; }
+.month.may { grid-column: 17 / 21; }
+.month.june { grid-column: 21 / 26; }
+.month.july { grid-column: 26 / 30; }
+.month.aug { grid-column: 30 / 34; }
+.month.sept { grid-column: 34 / 38; }
+.month.oct { grid-column: 38 / 42; }
+.month.nov { grid-column: 42 / 47; }
+.month.dec { grid-column: 47 / 54; }
 
 .day {
   border-radius: 1px;
@@ -51,18 +51,18 @@
 @media screen and (min-width: 200px) {
   .weekday { display: block; }
   .start { grid-column: 1 / 2; }
-  .jan { grid-column: 2 / 6; }
-  .feb { grid-column: 6 / 10; }
-  .mar { grid-column: 10 / 15; }
-  .apr { grid-column: 15 / 19; }
-  .may { grid-column: 19 / 23; }
-  .june { grid-column: 23 / 28; }
-  .july { grid-column: 28 / 32; }
-  .aug { grid-column: 32 / 36; }
-  .sept { grid-column: 36 / 41; }
-  .oct { grid-column:41 / 45; }
-  .nov { grid-column: 45 / 49; }
-  .dec { grid-column: 49 / 55; }
+  .month.jan { grid-column: 2 / 6; }
+  .month.feb { grid-column: 6 / 10; }
+  .month.mar { grid-column: 10 / 15; }
+  .month.apr { grid-column: 15 / 19; }
+  .month.may { grid-column: 19 / 23; }
+  .month.june { grid-column: 23 / 28; }
+  .month.july { grid-column: 28 / 32; }
+  .month.aug { grid-column: 32 / 36; }
+  .month.sept { grid-column: 36 / 41; }
+  .month.oct { grid-column:41 / 45; }
+  .month.nov { grid-column: 45 / 49; }
+  .month.dec { grid-column: 49 / 55; }
   .calendar {
     grid-template-rows: 25px repeat(7, 15px);
     grid-template-columns: 120px repeat(53, 15px);
