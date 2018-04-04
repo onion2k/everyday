@@ -8,7 +8,7 @@ Object.keys(months).map((month, i) => {
   for (let x = 0; x < 10; x++) {
     e[m+'-'+x] = { backgroundColor: colors[months[month].color][x] }
   }
-  return;
+  return true;
 });
 
 export default e;

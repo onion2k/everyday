@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "dateformat": "^3.0.3",
+    "firebase": "^4.12.1",
     "palx": "^1.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

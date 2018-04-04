@@ -10,6 +10,7 @@ import Calendar from './Components/Calendar';
 import Explainer from './Components/Explainer';
 import Affirmation from './Components/Affirmation';
 import Day from './Components/Day';
+import Signup from './Components/Signup';
 
 class App extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ class App extends Component {
     this.updateActiveDate = this.updateActiveDate.bind(this);
   }
   updateActiveDate(d){
-    let date = new Date(2018, 0, parseInt(d)+1);
+    let date = new Date(2018, 0, parseInt(d, 10)+1);
     this.setState({
       activity: this.state.days[d],
       active: dateformat(date, "fullDate")
@@ -46,6 +47,8 @@ class App extends Component {
         <Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} />
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
+        <Explainer />
+        <Signup />
         <Explainer />
       </div>
     );

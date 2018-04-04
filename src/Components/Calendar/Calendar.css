@@ -86,7 +86,7 @@
 }
 
 .active {
-  border-color: black;
+  border-color: #444444;
 }
 
 .day:hover[tooltip]{

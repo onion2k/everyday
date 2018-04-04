@@ -1,0 +1,15 @@
+
+.affirmation {
+  padding: 15px 10vw;
+  margin: 0;
+  text-align: center;
+}
+
+.name {
+  font-weight: 300;
+  color: #000088;
+}
+
+.activity, .duration, .total {
+  color: #008800;
+}

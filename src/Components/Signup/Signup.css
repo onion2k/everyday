@@ -1,0 +1,21 @@
+.signup {
+  min-height: 200px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  align-items: center;
+  justify-items: center;
+  padding:15px 10vw;
+  line-height: 1.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.signupButton {
+  padding: 15px;
+  font-size: 1.6rem;
+  font-weight: 200;
+  background-color: #f0fff0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}

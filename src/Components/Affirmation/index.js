@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Explainer.css';
+import './Affirmation.css';
 
 export default class Affirmation extends Component {
   render(){
