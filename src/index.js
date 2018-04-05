@@ -16,8 +16,24 @@ import firebase from './firebase';
 //     let user = d;
 //     let firestore = firebase.firestore();
 
-//     // firestore.collection('charts').add({ activity: 'write' }); // add with auto id
+//     console.log(user.uid);
+
+//     firestore.collection('activity').add({
+//       activity: 'write',
+//       note: '',
+//       timestamp: Date.now(),
+//       uid: user.uid
+//     });
+
 //     // firestore.collection('charts').doc('sing').set({ activity: 'sing' }); // upsert with defined id
+
+//     firestore.collection('charts').where('enabled', '==', true).get().then((querySnapshot)=>{
+//       querySnapshot.forEach(function(doc) {
+//         // doc.data() is never undefined for query doc snapshots
+//         console.log(doc.id, " => ", doc.data());
+//       });
+//     });
+
 
 //   })
 //   .catch(function(error) {
