@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-  Switch, Route, Link
+  Switch, Route
 } from 'react-router-dom'
 
 import dateformat from 'dateformat';
@@ -53,8 +53,6 @@ class App extends Component {
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
         <Explainer />
-        <Link to='/'>Home</Link>
-        <Link to='/something'>Something</Link>
         <Switch>
           <Route exact path='/' component={Signup} />
         </Switch>
