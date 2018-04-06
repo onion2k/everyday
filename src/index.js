@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import {
+  BrowserRouter as Router
+} from 'react-router-dom'
+
 // gitignored so the details don't get in to the repo. Create a local version
 import firebase from './firebase';
 
@@ -40,5 +44,5 @@ import firebase from './firebase';
 //     console.log(error);
 //   });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 // registerServiceWorker();
