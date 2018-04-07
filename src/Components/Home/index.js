@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import dateformat from 'dateformat';
 
 import data from '../../data.json';
@@ -44,6 +45,9 @@ class Home extends Component {
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
         <Explainer />
+        <Link to='/signup'>Sign Up.</Link>
+        <Link to='/user'>User</Link>
+
       </div>
     );
   }
