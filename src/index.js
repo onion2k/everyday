@@ -10,6 +10,7 @@ import {
 // gitignored so the details don't get in to the repo. Create a local version
 import firebase from './firebase';
 
+if (firebase.auth) {
 // import registerServiceWorker from './registerServiceWorker';
 
 // const email = "chris@usablehq.com";
@@ -43,6 +44,8 @@ import firebase from './firebase';
 //   .catch(function(error) {
 //     console.log(error);
 //   });
+  
+}
 
 ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 // registerServiceWorker();
