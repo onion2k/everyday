@@ -7,7 +7,7 @@ export default class Signup extends Component {
     return (
         <div className={"signup"}>
           <Link to='/signup' className={"signupButton"}>Create your first Everyday chart now</Link>
-          <Link to='/user'>Already got a chart? Sign in.</Link>
+          <Link to='/u/onion'>Already got a chart? Sign in.</Link>
         </div>
     );
   }

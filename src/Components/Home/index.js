@@ -8,6 +8,7 @@ import Welcome from '../../Components/Welcome';
 import Calendar from '../../Components/Calendar';
 import Explainer from '../../Components/Explainer';
 import Affirmation from '../../Components/Affirmation';
+import Signup from '../../Components/Signup';
 import Day from '../../Components/Day';
 
 class Home extends Component {
@@ -45,6 +46,12 @@ class Home extends Component {
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
         <Explainer />
+
+        <div style={{ display: 'flex', flexDirection: 'column', padding: '10px 10vw', alignItems: 'center' }}>
+          <Link to='/signup' className={"signupButton"}>Create your first Everyday chart now</Link>
+          <Link to='/u/onion'>Already got a chart? Sign in.</Link>
+        </div>
+
         <Link to='/signup'>Sign Up.</Link> |
         <Link to='/signin'>Sign In.</Link> |
         <Link to='/u/onion'>User</Link>
