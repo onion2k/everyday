@@ -45,8 +45,9 @@ class Home extends Component {
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
         <Explainer />
-        <Link to='/signup'>Sign Up.</Link>
-        <Link to='/user'>User</Link>
+        <Link to='/signup'>Sign Up.</Link> |
+        <Link to='/signin'>Sign In.</Link> |
+        <Link to='/u/onion'>User</Link>
 
       </div>
     );

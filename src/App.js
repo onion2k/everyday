@@ -8,6 +8,7 @@ import './App.css';
 
 import Title from './Components/Title';
 import Home from './Components/Home';
+import Activity from './Components/Activity';
 import Signup from './Components/Signup';
 import User from './Components/User';
 
@@ -19,7 +20,8 @@ class App extends Component {
         <Switch>
           <Route path='/signup' component={Signup} />
           <Route path='/signin' component={Signup} />
-          <Route exact path='/logout' component={Signup} />
+          <Route path='/logout' component={Signup} />
+          <Route path='/activity/:activity' component={Activity} />
           <Route path='/u/:user' component={User} />
           <Route component={Home} />
         </Switch>

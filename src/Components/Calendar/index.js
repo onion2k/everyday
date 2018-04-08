@@ -35,7 +35,7 @@ export default class Calendar extends Component {
       let productivity = 0;
       let day = this.state.days[x];
       let updates = 0;
-      if (day.productivity > 0) {
+      if (day && day.productivity > 0) {
         productivity = day.productivity - 1;
         updates = day.notes.length;
       }
