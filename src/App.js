@@ -9,6 +9,7 @@ import './App.css';
 import Title from './Components/Title';
 import Home from './Components/Home';
 import Signup from './Components/Signup';
+import User from './Components/User';
 
 class App extends Component {
   render() {
@@ -16,8 +17,10 @@ class App extends Component {
       <div className="App">
         <Title />
         <Switch>
-          <Route exact path='/signup' component={Signup} />
-          <Route exact path='/user' component={Signup} />
+          <Route path='/signup' component={Signup} />
+          <Route path='/signin' component={Signup} />
+          <Route exact path='/logout' component={Signup} />
+          <Route path='/u/:user' component={User} />
           <Route component={Home} />
         </Switch>
       </div>
