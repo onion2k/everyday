@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import dateformat from 'dateformat';
 
+import './Home.css';
+
 import data from '../../data.json';
 
 import Welcome from '../../Components/Welcome';
@@ -47,13 +49,11 @@ class Home extends Component {
         <Day date={this.state.active} notes={notes} />
         <Explainer />
 
-        <div style={{ display: 'flex', flexDirection: 'column', padding: '10px 10vw', alignItems: 'center' }}>
+        <div className={"signup"}>
           <Link to='/signup' className={"signupButton"}>Create your first Everyday chart now</Link>
-          <Link to='/u/onion'>Already got a chart? Sign in.</Link>
+          <Link to='/login'>Already got a chart? Sign in.</Link>
         </div>
 
-        <Link to='/signup'>Sign Up.</Link> |
-        <Link to='/signin'>Sign In.</Link> |
         <Link to='/u/onion'>User</Link>
 
       </div>

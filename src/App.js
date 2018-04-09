@@ -10,6 +10,7 @@ import Title from './Components/Title';
 import Home from './Components/Home';
 import Activity from './Components/Activity';
 import Signup from './Components/Signup';
+import Login from './Components/Login';
 import User from './Components/User';
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
         <Title />
         <Switch>
           <Route path='/signup' component={Signup} />
-          <Route path='/signin' component={Signup} />
+          <Route path='/login' component={Login} />
           <Route path='/logout' component={Signup} />
           <Route path='/activity/:activity' component={Activity} />
           <Route path='/u/:user' component={User} />
