@@ -47,6 +47,7 @@ export default class Login extends Component {
 
     return (
         <div className={"login"}>
+
           <div className={"banner"}>
             Sign in to your Everyday account
           </div>
