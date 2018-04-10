@@ -8,6 +8,12 @@ import './User.css';
 import Welcome from '../../Components/Welcome';
 import Calendar from '../../Components/Calendar';
 
+const u = {
+  displayName: "",
+  email: "",
+  emailVerified: false
+}
+
 export default class User extends Component {
   render(){
 
