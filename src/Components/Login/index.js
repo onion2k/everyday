@@ -56,7 +56,10 @@ export default class Login extends Component {
           console.log(error);
         });
 
+    } else {
+      this.props.history.push('/u/onion');
     }
+
   }
 
   render(){
