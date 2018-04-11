@@ -99,7 +99,7 @@ export default class Signup extends Component {
               </div>
               <div>
                 <label>Chart</label>
-                <span className="custom-dropdown">
+                <span className="dd">
                   <select>
                     <option>Sherlock Holmes</option>
                     <option>The Great Gatsby</option>  

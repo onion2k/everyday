@@ -1,27 +1,11 @@
 
-.big {
-  font-size: 1.2em;
-}
-
-.small {
-  font-size: .7em;
-}
-
-.square {
-  width: .7em;
-  height: .7em;
-  margin: .5em;
-  display: inline-block;
-}
-
-/* Custom dropdown */
-.custom-dropdown {
+.dd {
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
 
-.custom-dropdown select {
+.dd select {
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em;	
@@ -33,14 +17,14 @@
   -webkit-appearance: button; /* hide default arrow in chrome OSX */
 }
 
-.custom-dropdown::before,
-.custom-dropdown::after {
+.dd::before,
+.dd::after {
   content: "";
   position: absolute;
   pointer-events: none;
 }
 
-.custom-dropdown::after { /*  Custom dropdown arrow */
+.dd::after { /*  Custom dropdown arrow */
   content: "\25BC";
   height: 1em;
   font-size: .625em;
@@ -50,7 +34,7 @@
   margin-top: -.5em;
 }
 
-.custom-dropdown::before { /*  Custom dropdown arrow cover */
+.dd::before { /*  Custom dropdown arrow cover */
   width: 2em;
   right: 0;
   top: 0;
@@ -58,18 +42,18 @@
   border-radius: 0 3px 3px 0;
 }
 
-.custom-dropdown select[disabled] {
+.dd select[disabled] {
   color: rgba(0,0,0,.3);
 }
 
-.custom-dropdown select[disabled]::after {
+.dd select[disabled]::after {
   color: rgba(0,0,0,.1);
 }
 
-.custom-dropdown::before {
+.dd::before {
   background-color: rgba(0,0,0,.15);
 }
 
-.custom-dropdown::after {
+.dd::after {
   color: rgba(0,0,0,.4);
 }
