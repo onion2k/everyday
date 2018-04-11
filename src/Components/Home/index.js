@@ -44,7 +44,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <Welcome name={'Chris'} title={'creator of Everyday'} />
-        <Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} />
+        <div style={{ padding: '10px 10vw' }}><Calendar days={this.state.days} updateActiveDate={this.updateActiveDate} /></div>
         <Affirmation />
         <Day date={this.state.active} notes={notes} />
         <Explainer />

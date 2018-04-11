@@ -6,7 +6,7 @@ import {
 import './User.css';
 
 import Welcome from '../../Components/Welcome';
-import Calendar from '../../Components/Calendar';
+import Chart from '../../Components/Chart';
 
 const u = {
   displayName: "",
@@ -27,13 +27,21 @@ export default class User extends Component {
     if (email && !emailVerified) {
       emailVerifiedWarning = <div style={{ padding: '30px 10vw', backgroundColor: '#ffdddd' }}>You have created your chart by email but you haven't verified yet.</div>
     }
+    
+    let charts = null;
+    
+    charts = <div style={{ padding: '10px 10vw' }}>
+      <Chart title={"Code"} />
+      <Chart title={"Read"} />
+      <Chart title={"Writing"} />
+    </div>;
   
     return (
         <div className={"user"}>
           <Welcome name={match.params.user} />
           {emailVerifiedWarning}
           <Switch>
-            <Route exact path={match.url}><Calendar days={[]} /></Route>
+            <Route exact path={match.url}>{charts}</Route>
             <Route path={match.url+'/add'}><p>New Chart</p></Route>
             <Route path={match.url+'/preferences'}><p>Preferences</p></Route>
           </Switch>

@@ -100,7 +100,7 @@ export default class Login extends Component {
                 <input {...password} />
               </div>
               <div>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Log in" />
               </div>
             </form>
 

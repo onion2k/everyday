@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Title.css';
 
 export default class Title extends Component {
@@ -81,7 +82,7 @@ export default class Title extends Component {
     let style = { transform: "translateY("+this.state.offset+"px)" };
     return (
       <div className={"title"}>
-        <h1>Build positive habits with everyday</h1>
+        <Link to="/"><h1>Build positive habits with everyday</h1></Link>
         <h2><span className={"activity"} style={style}>{title}</span> every day</h2>
       </div>
     );
