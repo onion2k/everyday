@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../firebase';
-import Combobo from 'combobo';
 import './Signup.css';
 
 export default class Signup extends Component {
@@ -11,26 +10,6 @@ export default class Signup extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount(){
-
-    const chart = new Combobo({input: '.combobox',
-      list: '.listbox',
-      options: '.option', 
-      openClass: 'open',
-      activeClass: 'active',
-      selectedClass: 'selected',
-      useLiveRegion: true,
-      noResultsText: null,
-      selectionValue: (selecteds) => selecteds.map((s) => s.innerText.trim()).join(' - '),
-      optionValue: 'underline', // wrap the matched portion of the option (if applicable) in a span with class "underline"
-      filter: 'contains' // 'starts-with', 'equals', or funk
-    });
-
-    chart.on('selection', (e) => {
-      this.setState({'chart': chart.currentOption.innerText});
-    });
   }
 
   handleChange(event) {
@@ -120,23 +99,15 @@ export default class Signup extends Component {
               </div>
               <div>
                 <label>Chart</label>
-                <div className="combo-wrap">
-                  <input type="text" name="chart" className="combobox" id="combobox-single" onChange={this.handleChange} value={this.state.chart} />
-                  <i aria-hidden="true" className="fa trigger fa-caret-down" data-trigger="single"></i>
-                  <div className="listbox">
-                    <div className="option">Ween</div>
-                    <div className="option">Frank Zappa</div>
-                    <div className="option">Snarky Puppy</div>
-                    <div className="option">Umphrey's McGee</div>
-                    <div className="option">Keller Williams</div>
-                    <div className="option">Greensky Bluegrass</div>
-                    <div className="option">Leftover Salmon</div>
-                    <div className="option">Code</div>
-                    <div className="option">Family Groove Company</div>
-                    <div className="option">Mac Demarco</div>
-                    <div className="option">Lettuce</div>
-                  </div>
-                </div>
+                <span className="custom-dropdown">
+                  <select>
+                    <option>Sherlock Holmes</option>
+                    <option>The Great Gatsby</option>  
+                    <option>V for Vendetta</option>
+                    <option>The Wolf of Wallstreet</option>
+                    <option>Quantum of Solace</option>
+                  </select>
+                </span>
               </div>
 
               <div>
