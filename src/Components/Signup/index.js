@@ -28,10 +28,8 @@ export default class Signup extends Component {
       filter: 'contains' // 'starts-with', 'equals', or funk
     });
 
-    chart.on('change', (e) => {
-      this.setState({
-        'chart': chart.currentOption.innerText
-      });
+    chart.on('selection', (e) => {
+      this.setState({'chart': chart.currentOption.innerText});
     });
   }
 
