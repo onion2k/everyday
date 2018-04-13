@@ -12,6 +12,7 @@ import Activity from './Components/Activity';
 import Signup from './Components/Signup';
 import Login from './Components/Login';
 import User from './Components/User';
+import Footer from './Components/Footer';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path='/u/:user' component={User} />
           <Route component={Home} />
         </Switch>
+        <Footer />
       </div>
     );
   }
