@@ -53,8 +53,6 @@ class Home extends Component {
           <Link to='/login'>Already got a chart? Sign in.</Link>
         </div>
 
-        <Link to='/u/onion'>User</Link>
-
       </div>
     );
   }
