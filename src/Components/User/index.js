@@ -7,6 +7,7 @@ import './User.css';
 
 import Welcome from '../../Components/Welcome';
 import Chart from '../../Components/Chart';
+import Update from '../../Components/Update';
 
 const u = {
   displayName: "",
@@ -45,6 +46,7 @@ export default class User extends Component {
             <Route path={match.url+'/add'}><p>New Chart</p></Route>
             <Route path={match.url+'/preferences'}><p>Preferences</p></Route>
           </Switch>
+          <Update />
         </div>
     );
   }

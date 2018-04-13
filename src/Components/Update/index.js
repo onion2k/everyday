@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import firebase from '../../firebase';
-import './Login.css';
+import './Update.css';
 
-export default class Login extends Component {
+export default class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {email: 'chris@usablehq.com', password: 'asd'};
@@ -64,47 +64,36 @@ export default class Login extends Component {
 
   render(){
 
-    let email = {
-      type: "email",
-      name: "email",
+    let note = {
+      type: "text",
+      name: "note",
       autoComplete: "off",
-      value: this.state.email,
-      placeholder: "chris@everyday.com",
-      onChange: this.handleChange
-    }
-    
-    let password = {
-      type: "password",
-      name: "password",
-      autoComplete: "off",
-      value: this.state.password,
+      value: this.state.note,
+      placeholder: "Any comments?",
       onChange: this.handleChange
     }
 
     return (
-        <div className={"login"}>
-
-          <div className={"banner"}>
-            Sign in to your Everyday account
-          </div>
-
-          <div>
+        <div className={"update"}>
 
             <form onSubmit={this.handleSubmit}>
-              <div>
-                <label>Email address</label>
-                <input {...email} />
-              </div>
-              <div>
-                <label>Password</label>
-                <input {...password} />
-              </div>
-              <div>
-                <input type="submit" value="Log in" />
+            <div>
+              <h3>Update your chart</h3>
+                <label>Chart</label>
+                <span className="dd">
+                  <select>
+                    <option>Read</option>
+                    <option>Code</option>
+                    <option>Writing</option>
+                  </select>
+                </span>
+
+                <label>Notes</label>
+                <input {...note} />
+
+                <input type="submit" value="Update" />
               </div>
             </form>
-
-          </div>
 
         </div>
     );
