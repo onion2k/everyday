@@ -19,7 +19,6 @@ export default class User extends Component {
   render(){
 
     let match = this.props.match;
-    let username = u.displayName || "";
     let email = u.email;
     let emailVerified = u.emailVerified;
 

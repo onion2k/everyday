@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 
 import Calendar from '../../Components/Calendar';
 
-const u = {
-  displayName: "",
-  email: "",
-  emailVerified: false
-}
-
 export default class Chart extends Component {
   render(){
     return (

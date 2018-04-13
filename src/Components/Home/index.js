@@ -10,7 +10,6 @@ import Welcome from '../../Components/Welcome';
 import Calendar from '../../Components/Calendar';
 import Explainer from '../../Components/Explainer';
 import Affirmation from '../../Components/Affirmation';
-import Signup from '../../Components/Signup';
 import Day from '../../Components/Day';
 
 class Home extends Component {
