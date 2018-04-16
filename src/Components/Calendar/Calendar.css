@@ -1,10 +1,17 @@
 .calendar {
   flex: 1;
   display: grid;
-  grid-template-rows: 20px repeat(7, 10px);
-  grid-template-columns: repeat(53, 10px);
+  grid-template-rows: repeat(72, 20px);
+  grid-template-columns: repeat(7, 20px);
   grid-gap: 1px;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+}
+
+.day {
+  border-radius: 1px;
+  border: 1px solid #bbbbbb;
+  background-color: #f8f8f8;
+  font-size: 0.5rem;
 }
 
 .weekday {
@@ -23,58 +30,21 @@
   justify-self: start;
 }
 
-.month.jan { grid-column: 1 / 5; }
-.month.feb { grid-column: 5 / 9; }
-.month.mar { grid-column: 9 / 13; }
-.month.apr { grid-column: 13 / 17; }
-.month.may { grid-column: 17 / 21; }
-.month.june { grid-column: 21 / 26; }
-.month.july { grid-column: 26 / 30; }
-.month.aug { grid-column: 30 / 34; }
-.month.sept { grid-column: 34 / 38; }
-.month.oct { grid-column: 38 / 42; }
-.month.nov { grid-column: 42 / 47; }
-.month.dec { grid-column: 47 / 54; }
-
-.day {
-  border-radius: 1px;
-  border: 1px solid #bbbbbb;
-  background-color: #f8f8f8;
-  font-size: 0.5rem;
-}
+.month.jan { grid-column: 1 / 8; }
+.month.feb { grid-column: 1 / 8; }
+.month.mar { grid-column: 1 / 8; }
+.month.apr { grid-column: 1 / 8; }
+.month.may { grid-column: 1 / 8; }
+.month.june { grid-column: 1 / 8; }
+.month.july { grid-column: 1 / 8; }
+.month.aug { grid-column: 1 / 8; }
+.month.sept { grid-column: 1 / 8; }
+.month.oct { grid-column: 1 / 8; }
+.month.nov { grid-column: 1 / 8; }
+.month.dec { grid-column: 1 / 8; }
 
 .dark {
   background-color: #bbbbbb;
-}
-
-@media screen and (min-width: 200px) {
-  .weekday { display: block; }
-  .start { grid-column: 1 / 2; }
-  .month.jan { grid-column: 2 / 6; }
-  .month.feb { grid-column: 6 / 10; }
-  .month.mar { grid-column: 10 / 15; }
-  .month.apr { grid-column: 15 / 19; }
-  .month.may { grid-column: 19 / 23; }
-  .month.june { grid-column: 23 / 28; }
-  .month.july { grid-column: 28 / 32; }
-  .month.aug { grid-column: 32 / 36; }
-  .month.sept { grid-column: 36 / 41; }
-  .month.oct { grid-column:41 / 45; }
-  .month.nov { grid-column: 45 / 49; }
-  .month.dec { grid-column: 49 / 55; }
-  .calendar {
-    grid-template-rows: 25px repeat(7, 15px);
-    grid-template-columns: 120px repeat(53, 15px);
-    grid-gap: 2px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .calendar {
-    grid-template-rows: 20px repeat(7, 16px);
-    grid-template-columns: 100px repeat(53, 16px);
-    grid-gap: 3px;
-  }
 }
 
 .fiftyfifty {
@@ -117,4 +87,62 @@
     min-width: 60px;
     border-radius: 5px;
     pointer-events: none;
+}
+
+@media screen and (min-width: 600px) {
+  .calendar {
+    display: grid;
+    grid-template-rows: 20px repeat(7, 10px);
+    grid-template-columns: repeat(53, 10px);
+    grid-gap: 1px;
+    grid-auto-flow: column;
+  }
+  .day {
+    border-radius: 1px;
+    border: 1px solid #bbbbbb;
+    background-color: #f8f8f8;
+    font-size: 0.5rem;
+  }
+  .month.jan { grid-column: 1 / 5; }
+  .month.feb { grid-column: 5 / 9; }
+  .month.mar { grid-column: 9 / 13; }
+  .month.apr { grid-column: 13 / 17; }
+  .month.may { grid-column: 17 / 21; }
+  .month.june { grid-column: 21 / 26; }
+  .month.july { grid-column: 26 / 30; }
+  .month.aug { grid-column: 30 / 34; }
+  .month.sept { grid-column: 34 / 38; }
+  .month.oct { grid-column: 38 / 42; }
+  .month.nov { grid-column: 42 / 47; }
+  .month.dec { grid-column: 47 / 54; }
+}
+
+@media screen and (min-width: 800px) {
+  .weekday { display: block; }
+  .start { grid-column: 1 / 2; }
+  .month.jan { grid-column: 2 / 6; }
+  .month.feb { grid-column: 6 / 10; }
+  .month.mar { grid-column: 10 / 15; }
+  .month.apr { grid-column: 15 / 19; }
+  .month.may { grid-column: 19 / 23; }
+  .month.june { grid-column: 23 / 28; }
+  .month.july { grid-column: 28 / 32; }
+  .month.aug { grid-column: 32 / 36; }
+  .month.sept { grid-column: 36 / 41; }
+  .month.oct { grid-column:41 / 45; }
+  .month.nov { grid-column: 45 / 49; }
+  .month.dec { grid-column: 49 / 55; }
+  .calendar {
+    grid-template-rows: 25px repeat(7, 15px);
+    grid-template-columns: 120px repeat(53, 15px);
+    grid-gap: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .calendar {
+    grid-template-rows: 20px repeat(7, 16px);
+    grid-template-columns: 100px repeat(53, 16px);
+    grid-gap: 3px;
+  }
 }
