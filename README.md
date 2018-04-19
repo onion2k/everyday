@@ -21,3 +21,4 @@ The philosophy behind the "everyday" project is threefold;
 * Account creation
 * everyday stats
 * Firebase integration
+* look at turning the calendar in to a stencil component
