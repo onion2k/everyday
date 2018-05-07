@@ -17,8 +17,9 @@ The philosophy behind the "everyday" project is threefold;
 * Better responsiveness inc mobile
 * Day components
 * Integrate Redux/Mobx for state
+* Web form input
 * Begin inputs (chatbot, Twilio, Alexa, etc)
-* Account creation
+* Account registration with Firebase
 * everyday stats
 * Firebase integration
 * look at turning the calendar in to a stencil component
