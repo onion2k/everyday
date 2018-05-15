@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import firebase from '../../firebase';
+// import firebase from '../../firebase';
 import './Signup.css';
 
 export default class Signup extends Component {
@@ -24,38 +24,38 @@ export default class Signup extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    if (firebase.auth && 0) {
+    // if (firebase.auth && 0) {
 
-      firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then((d) => {
-          let user = d;
-          let firestore = firebase.firestore();
+    //   firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+    //     .then((d) => {
+    //       let user = d;
+    //       let firestore = firebase.firestore();
 
-          console.log(user)
+    //       console.log(user)
 
-          firestore.collection('activity').add({
-            activity: 'write',
-            note: '',
-            timestamp: Date.now(),
-            uid: user.uid
-          });
+    //       firestore.collection('activity').add({
+    //         activity: 'write',
+    //         note: '',
+    //         timestamp: Date.now(),
+    //         uid: user.uid
+    //       });
 
-          // firestore.collection('charts').doc('sing').set({ activity: 'sing' }); // upsert with defined id
+    //       // firestore.collection('charts').doc('sing').set({ activity: 'sing' }); // upsert with defined id
 
-          firestore.collection('charts').where('enabled', '==', true).get().then((querySnapshot)=>{
-            querySnapshot.forEach((doc)=>{
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              this.props.history.push('/u/onion');
-            });
-          });
+    //       firestore.collection('charts').where('enabled', '==', true).get().then((querySnapshot)=>{
+    //         querySnapshot.forEach((doc)=>{
+    //           // doc.data() is never undefined for query doc snapshots
+    //           console.log(doc.id, " => ", doc.data());
+    //           this.props.history.push('/u/onion');
+    //         });
+    //       });
 
 
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    }
+    //     })
+    //     .catch(function(error) {
+    //       console.log(error);
+    //     });
+    // }
 
   }
 

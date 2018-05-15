@@ -8,9 +8,9 @@ import {
 } from 'react-router-dom'
 
 // gitignored so the details don't get in to the repo. Create a local version
-import firebase from './firebase';
+// import firebase from './firebase';
 
-if (firebase.auth) {
+// if (firebase.auth) {
 // import registerServiceWorker from './registerServiceWorker';
 
 // const email = "chris@usablehq.com";
@@ -45,7 +45,7 @@ if (firebase.auth) {
 //     console.log(error);
 //   });
   
-}
+// }
 
 ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 // registerServiceWorker();
