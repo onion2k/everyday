@@ -39,24 +39,23 @@ export default class Update extends Component {
     return (
         <div className={"update"}>
 
-            <form onSubmit={this.handleSubmit}>
-            <div>
-              <h3>Update your chart</h3>
-                <label>Chart</label>
-                <span className="dd">
-                  <select>
-                    <option>Read</option>
-                    <option>Code</option>
-                    <option>Writing</option>
-                  </select>
-                </span>
+          <form onSubmit={this.handleSubmit}>
 
-                <label>Notes</label>
-                <input {...note} />
+            <label>Notes</label>
+            <input {...note} />
 
-                <input type="submit" value="Update" />
-              </div>
-            </form>
+            <label>
+            Chart:
+            </label>
+            <select>
+              <option>Read</option>
+              <option>Code</option>
+              <option>Writing</option>
+            </select>
+
+            <input type="submit" value="Update" />
+            
+          </form>
 
         </div>
     );

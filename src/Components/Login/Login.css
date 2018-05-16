@@ -3,26 +3,23 @@
   padding: 15px 10vw;
 }
 
-form {
+form.login {
   padding: 15px 10vw;
 }
 
-form > div {
+form.login > div {
   padding: 10px 0;
 }
 
 label {
   display: block;
-  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
-input {
-  padding: 5px;
-  font-size: 1.2rem;
+input.login  {
+
 }
 
 input[type=submit] {
-  padding: 5px;
-  font-size: 1.2rem;
+
 }

@@ -141,8 +141,8 @@
 
 @media screen and (min-width: 1200px) {
   .calendar {
-    grid-template-rows: 20px repeat(7, 16px);
-    grid-template-columns: 100px repeat(53, 16px);
+    grid-template-rows: 20px repeat(7, 14px);
+    grid-template-columns: 100px repeat(53, 14px);
     grid-gap: 3px;
   }
 }
