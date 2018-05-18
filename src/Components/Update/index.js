@@ -41,17 +41,8 @@ export default class Update extends Component {
 
           <form onSubmit={this.handleSubmit}>
 
-            <label>Notes</label>
+            <label>Update</label>
             <input {...note} />
-
-            <label>
-            Chart:
-            </label>
-            <select>
-              <option>Read</option>
-              <option>Code</option>
-              <option>Writing</option>
-            </select>
 
             <input type="submit" value="Update" />
             

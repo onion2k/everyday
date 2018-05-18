@@ -7,10 +7,9 @@ export default class Chart extends Component {
   render(){
     return (
       <div className={"chart"}>
-        <h1>{this.props.title}</h1>
+        <h3>{this.props.title}</h3>
         <Calendar days={[]} />
         <Update />
-        <div>Chart status bar</div>
       </div>
     );
   }

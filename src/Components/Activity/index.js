@@ -20,10 +20,10 @@ export default class Activity extends Component {
     return (
         <div className={"user"}>
         <Calendar days={this.state.days} update={this.update} />
-          <Switch>
-            <Route exact path={match.url}><p>Chart</p></Route>
-            <Route path={match.url+'/add'}><p>New Chart</p></Route>
-          </Switch>
+        <Switch>
+          <Route exact path={match.url}><p>Chart</p></Route>
+          <Route path={match.url+'/add'}><p>New Chart</p></Route>
+        </Switch>
         </div>
     );
   }
