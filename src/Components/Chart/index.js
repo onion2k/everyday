@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Calendar from '../../Components/Calendar';
+import Update from '../../Components/Update';
 
 export default class Chart extends Component {
   render(){
@@ -8,6 +9,7 @@ export default class Chart extends Component {
       <div className={"chart"}>
         <h1>{this.props.title}</h1>
         <Calendar days={[]} />
+        <Update />
         <div>Chart status bar</div>
       </div>
     );
