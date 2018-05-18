@@ -23,3 +23,4 @@ The philosophy behind the "everyday" project is threefold;
 * everyday stats
 * Firebase integration
 * look at turning the calendar in to a stencil component
+* Figure out streak detection
