@@ -12,6 +12,10 @@ The philosophy behind the "everyday" project is threefold;
 
 **everyday** is a web app that keeps track of something that you do every day, and encourages you to keep going, especially if you miss a day. It was inspired by the Github contributions graph, which I use to track my "coding every day" habit, and I wanted to expand for other people to track their projects too.
 
+# Tech
+
+**everyday** uses React for the frontend and Firebase for data storage and serverless functions (or it will in the future).
+
 # Todo
 
 * Better responsiveness inc mobile
